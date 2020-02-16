@@ -12,8 +12,27 @@
     background-image: url(./img/banner.jpg);
     background-size: cover;
     margin-top: -100px;
+    // 使用格線
+    display: grid;
+    // 對齊內容：垂直對齊中間
+    align-items: center;
+
+    div {
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+
+        h1 {
+            font-size: 72px;
+        }
+
+        h2 {
+            padding: 10px 0;
+        }
+    }
 }
 
+// 導覽列
 nav {
     display: grid;
     grid-template-columns: auto 80px auto;
@@ -54,5 +73,16 @@ nav {
         &:hover {
             transform: scaleX(-1.2) scaleY(1.2);
         }
+    }
+}
+
+.content {
+    max-width: 1200px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+
+    * {
+        color: #333;
     }
 }
