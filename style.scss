@@ -15,6 +15,7 @@ $bg-color: #F8F9FA;
     height: 100vh;
     background-image: url(./img/banner.jpg);
     background-size: cover;
+    background-attachment: fixed;
     margin-top: -100px;
     // 使用格線
     display: grid;
@@ -158,15 +159,19 @@ nav {
         div {
             display: block;
             text-align: center;
+            
 
             img {
                 display: inline-block;
                 width: 64px;
+                transition: 0.5s;
+                filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
             }
             span {
                 display: block;
                 padding: 10px 0;
                 font-size: 12px;
+                transition: 0.5s;
             }
             &:hover img {
                 filter: invert(29%) sepia(59%) saturate(3361%) hue-rotate(341deg) brightness(105%) contrast(91%);
@@ -175,5 +180,21 @@ nav {
                 color: $text-color-red;
             }
         }
+    }
+}
+
+// 頁尾
+footer {
+    background-color: $text-color-black;
+    text-align: center;
+    padding: 30px 0;
+
+    img {
+        width: 100px;
+    }
+
+    p {
+        font-size: 10px;
+        padding: 10px 0;
     }
 }

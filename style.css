@@ -12,6 +12,7 @@
   height: 100vh;
   background-image: url(./img/banner.jpg);
   background-size: cover;
+  background-attachment: fixed;
   margin-top: -100px;
   display: -ms-grid;
   display: grid;
@@ -180,12 +181,18 @@ nav img:hover {
 #icon div div img {
   display: inline-block;
   width: 64px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
+          filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
 }
 
 #icon div div span {
   display: block;
   padding: 10px 0;
   font-size: 12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #icon div div:hover img {
@@ -195,5 +202,20 @@ nav img:hover {
 
 #icon div div:hover span {
   color: #F83D40;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer img {
+  width: 100px;
+}
+
+footer p {
+  font-size: 10px;
+  padding: 10px 0;
 }
 /*# sourceMappingURL=style.css.map */
