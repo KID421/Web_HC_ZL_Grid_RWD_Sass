@@ -143,11 +143,11 @@ nav img:hover {
 
 #content-1,
 #content-3 {
-      grid-template-areas: "pic text-area";
+      grid-template-areas: 'pic text-area';
 }
 
 #content-2 {
-      grid-template-areas: "text-area pic";
+      grid-template-areas: 'text-area pic';
 }
 
 #icon {
@@ -279,6 +279,62 @@ footer p {
   font-size: 36px;
 }
 
+@media screen and (max-width: 768px) {
+  nav {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  nav ul {
+    display: none;
+  }
+  #banner div {
+    width: 100%;
+  }
+  #banner div h1 {
+    font-size: 36px;
+  }
+  #menu {
+    display: block;
+  }
+  #menu #menu-box {
+    width: 300px;
+    font-size: 20px;
+  }
+  #menu #menu-box ul li {
+    padding: 20px;
+  }
+  #menu #menu-box ul li a {
+    font-size: 20px;
+  }
+  #content-1,
+  #content-2,
+  #content-3 {
+        grid-template-areas: 'text-area' 'pic';
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #content-1 .pic,
+  #content-2 .pic,
+  #content-3 .pic {
+    text-align: center;
+  }
+  #content-1 .pic img,
+  #content-2 .pic img,
+  #content-3 .pic img {
+    width: 300px;
+  }
+  #content-1 .text-area,
+  #content-2 .text-area,
+  #content-3 .text-area {
+    padding: 0px;
+  }
+  #icon div {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+  }
+}
+
 @media screen and (min-width: 769px) {
   nav {
     -ms-grid-columns: auto;
@@ -290,21 +346,54 @@ footer p {
   #menu {
     display: block;
   }
-  #content-1, #content-2, #content-3 {
-        grid-template-areas: "text-area" "pic";
+  #content-1,
+  #content-2,
+  #content-3 {
+        grid-template-areas: 'text-area' 'pic';
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
-  #content-1 .pic, #content-2 .pic, #content-3 .pic {
+  #content-1 .pic,
+  #content-2 .pic,
+  #content-3 .pic {
     text-align: center;
   }
-  #content-1 .text-area, #content-2 .text-area, #content-3 .text-area {
+  #content-1 .text-area,
+  #content-2 .text-area,
+  #content-3 .text-area {
     padding: 0 100px;
   }
   #icon div {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     padding: 50px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  nav {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+  }
+  nav ul {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+  #content-1,
+  #content-2,
+  #content-3 {
+        grid-template-areas: 'text-area pic';
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #content-2 {
+        grid-template-areas: 'pic text-area';
+  }
+  #icon div {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
   }
 }
 /*# sourceMappingURL=style.css.map */
