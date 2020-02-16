@@ -163,5 +163,22 @@ nav img:hover {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
+  padding: 20px 0;
+}
+
+#icon div div {
+  display: block;
+  text-align: center;
+}
+
+#icon div div img {
+  display: block;
+  width: 64px;
+}
+
+#icon div div span {
+  display: block;
+  padding: 10px 0;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -146,5 +146,21 @@ nav {
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        padding: 20px 0;
+
+        div {
+            display: block;
+            text-align: center;
+
+            img {
+                display: block;
+                width: 64px;
+            }
+            span {
+                display: block;
+                padding: 10px 0;
+                font-size: 12px;
+            }
+        }
     }
 }
