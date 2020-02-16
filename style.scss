@@ -203,6 +203,56 @@ footer {
 // 菜單
 #menu {
     display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    cursor: pointer;
+
+    a.current {
+        background-color: $text-color-red;
+        display: inline-block;
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-align: center;
+        color: #fff !important;
+    }
+
+    img {
+        filter: invert(1);
+    }
+
+    // 啟動：點選元素時
+    &:active #menu-box{
+        right: 0;
+    }
+    &:hover #menu-box{
+        right: 0;
+    }
+
+    #menu-box {
+        position: absolute;
+        right: -500px;
+        top: 0;
+        width: 500px;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.5s;
+
+        ul {
+            list-style: none;
+            li {
+                padding: 30px;
+
+                a {
+                    color: $text-color-black;
+                    text-decoration: none;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
 }
 
 // 手機
@@ -223,12 +273,6 @@ footer {
 
     #menu {
         display: block;
-        position: fixed;
-        right: 0;
-        top: 0;
-        padding: 10px;
-        filter: invert(1);
-        cursor: pointer;
     }
 }
 
