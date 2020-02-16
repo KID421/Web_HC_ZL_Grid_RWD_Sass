@@ -76,6 +76,7 @@ nav {
     }
 }
 
+// 文章區域
 .content {
     max-width: 1200px;
     display: grid;
@@ -85,4 +86,21 @@ nav {
     * {
         color: #333;
     }
+
+    .pic {
+        // 格線區域名稱：自行命名
+        grid-area: pic;
+    }
+
+    .text-area {
+        grid-area: text-area;
+    }
+}
+
+#content-1, #content-3 {
+    // 設定格線區域：'區域名稱 區域名稱'
+    grid-template-areas: 'pic text-area';
+}
+#content-2 {
+    grid-template-areas: 'text-area pic';
 }
