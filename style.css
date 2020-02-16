@@ -93,6 +93,7 @@ nav img:hover {
   margin: 0 auto;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  padding: 30px;
 }
 
 .content * {

@@ -84,6 +84,7 @@ nav {
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
+    padding: 30px;
 
     * {
         color: $text-color-black;
