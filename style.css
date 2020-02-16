@@ -181,8 +181,8 @@ nav img:hover {
 #icon div div img {
   display: inline-block;
   width: 64px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   -webkit-filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
           filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
 }
@@ -191,8 +191,8 @@ nav img:hover {
   display: block;
   padding: 10px 0;
   font-size: 12px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #icon div div:hover img {
@@ -207,15 +207,41 @@ nav img:hover {
 footer {
   background-color: #333;
   text-align: center;
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 footer img {
   width: 100px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 
 footer p {
   font-size: 10px;
-  padding: 10px 0;
+  padding: 20px 0;
+}
+
+#menu {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  nav ul {
+    display: none;
+  }
+  #menu {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    cursor: pointer;
+  }
 }
 /*# sourceMappingURL=style.css.map */

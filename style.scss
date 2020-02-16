@@ -164,14 +164,14 @@ nav {
             img {
                 display: inline-block;
                 width: 64px;
-                transition: 0.5s;
+                transition: 0.3s;
                 filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0) brightness(0%) contrast(100%);
             }
             span {
                 display: block;
                 padding: 10px 0;
                 font-size: 12px;
-                transition: 0.5s;
+                transition: 0.3s;
             }
             &:hover img {
                 filter: invert(29%) sepia(59%) saturate(3361%) hue-rotate(341deg) brightness(105%) contrast(91%);
@@ -187,14 +187,52 @@ nav {
 footer {
     background-color: $text-color-black;
     text-align: center;
-    padding: 30px 0;
+    padding: 50px 0;
 
     img {
         width: 100px;
+        transform: scaleX(-1);
     }
 
     p {
         font-size: 10px;
-        padding: 10px 0;
+        padding: 20px 0;
     }
+}
+
+// 菜單
+#menu {
+    display: none;
+}
+
+// 手機
+@media screen and (max-width: 768px) {
+
+}
+
+// 平板
+@media screen and (min-width: 769px) {
+
+    nav {
+        grid-template-columns: auto;
+
+        ul {
+            display: none;
+        }
+    }
+
+    #menu {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        padding: 10px;
+        filter: invert(1);
+        cursor: pointer;
+    }
+}
+
+// 電腦
+@media screen and (min-width: 1025px) {
+
 }
