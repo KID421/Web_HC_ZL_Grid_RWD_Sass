@@ -1,4 +1,5 @@
 $text-color-black: #333;
+$text-color-red: #F83D40;
 $bg-color: #F8F9FA;
 
 * {
@@ -141,6 +142,12 @@ nav {
         color: $text-color-black;
     }
 
+    h1 {
+        font-size: 72px;
+        text-align: center;
+        padding: 30px 0 10px;
+    }
+
     div {
         max-width: 1200px;
         margin: 0 auto;
@@ -153,13 +160,19 @@ nav {
             text-align: center;
 
             img {
-                display: block;
+                display: inline-block;
                 width: 64px;
             }
             span {
                 display: block;
                 padding: 10px 0;
                 font-size: 12px;
+            }
+            &:hover img {
+                filter: invert(29%) sepia(59%) saturate(3361%) hue-rotate(341deg) brightness(105%) contrast(91%);
+            }
+            &:hover span {
+                color: $text-color-red;
             }
         }
     }
